@@ -1,12 +1,12 @@
 import React,{useEffect, useState} from 'react'
 import {NavLink} from 'react-router-dom';
-import {IoAdd,IoPause,IoPlay,IoTrash} from 'react-icons/io5'
+import {IoAdd} from 'react-icons/io5'
 import {AiOutlineClear} from 'react-icons/ai'
 import {useStateValue} from '../context/StateProvider';
 import { getAllSongs } from '../api';
 import { actionType } from '../context/reducer'
 import SongCard from './SongCard';
-import SearchBar from './SearchBar';
+// import SearchBar from './SearchBar';
 export default function DashboardSongs() {
   const [songFilter, setsongFilter] = useState("");
   const [isFocus, setisFocus] = useState(false);
@@ -20,7 +20,7 @@ export default function DashboardSongs() {
         })
       })
     }
-  },[])
+  })
   return (
     <div className='w-full p-4 flex items-center justify-center flex-col'>
       <div className='w-full flex justify-center items-center gap-20'>

@@ -44,18 +44,18 @@
 
 
 
-import React,{useEffect, useState} from 'react'
-import {NavLink} from 'react-router-dom';
-import {IoAdd,IoPause,IoPlay,IoTrash} from 'react-icons/io5'
-import {AiOutlineClear} from 'react-icons/ai'
+import React,{useEffect} from 'react'
+// import {NavLink} from 'react-router-dom';
+// import {IoAdd,IoPause,IoPlay,IoTrash} from 'react-icons/io5'
+// import {AiOutlineClear} from 'react-icons/ai'
 import {useStateValue} from '../context/StateProvider';
 import { getAllSongs } from '../api';
 import { actionType } from '../context/reducer'
-import SongCard from './SongCard';
+// import SongCard from './SongCard';
 import SongCard1 from './SongCard1';
 export default function Music() {
-  const [songFilter, setsongFilter] = useState("");
-  const [isFocus, setisFocus] = useState(false);
+  // const [songFilter, setsongFilter] = useState("");
+  // const [isFocus, setisFocus] = useState(false);
   const [{allSongs}, dispatch] = useStateValue();
   useEffect(()=>{
     if(!allSongs){
@@ -66,7 +66,7 @@ export default function Music() {
         })
       })
     }
-  },[])
+  })
   return (
   
     <div className='w-full p-4 flex items-center justify-center flex-col'>

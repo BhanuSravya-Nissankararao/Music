@@ -1,7 +1,7 @@
 import './App.css';
 import React,{useEffect, useState} from 'react';
 import { Routes,Route, useNavigate } from 'react-router-dom';
-import { Home , Login } from './Components';
+import {  Login } from './Components';
 import { app } from './config/firebase.config';
 import { getAuth } from 'firebase/auth';
 import {AnimatePresence, motion} from 'framer-motion'
@@ -15,11 +15,12 @@ import MusicPlayer from './Components/MusicPlayer';
 function App() {
   const firebaseAuth = getAuth(app);
   const navigate=useNavigate();
-  const [{user,isSongPlaying},dispatch] = useStateValue();
+  const [{isSongPlaying},dispatch] = useStateValue();
   const [auth , setAuth] = useState(false || window.localStorage.getItem("auth") === "true")
   useEffect(()=>{
     firebaseAuth.onAuthStateChanged((userCred) =>{
       if(userCred){
+        console.log(auth);
         userCred.getIdToken().then((token)=>{
           // console.log(token);
           validateUser(token).then((data)=>{
@@ -40,7 +41,7 @@ function App() {
         navigate("/login");
       }
     })
-  },[])
+  })
   return (
     <AnimatePresence mode='exitBeforeEnter'>
     <div className="h-auto min-w-[680px] bg-primary flex justify-center items-center">
