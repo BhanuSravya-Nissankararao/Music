@@ -1,0 +1,1 @@
+export { default as Logo} from "./m1.jpg";
