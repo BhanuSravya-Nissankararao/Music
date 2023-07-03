@@ -13,6 +13,7 @@ import Alert from "./Alert";
 import { useStateValue } from '../context/StateProvider'
 export default function Dashboard() {
   const [{alertType},dispath] = useStateValue();
+  console.log(dispath);
   return (
     <div className='w-full h-auto flex flex-col items-center justify-center bg-primary'>
       <Header />

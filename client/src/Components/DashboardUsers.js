@@ -7,6 +7,7 @@ import {actionType} from "../context/reducer"
 import { MdDelete} from "react-icons/md"
 export default function DashboardUsers() {
   const [{allUsers},dispatch] = useStateValue();
+  console.log(dispatch);
   return (
     <div className='w-full p-4 flex items-center justify-center flex-col'>
       {/* filters */}

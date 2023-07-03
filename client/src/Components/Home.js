@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Header from './Header'
-import { useStateValue } from '../context/StateProvider';
-import { getAllSongs } from '../api';
-import { actionType } from '../context/reducer';
-import SongCard1 from './SongCard1';
+// import { useStateValue } from '../context/StateProvider';
+// import { getAllSongs } from '../api';
+// import { actionType } from '../context/reducer';
+// import SongCard1 from './SongCard1';
 
 export default function home() {
   // const [{allSongs}, dispatch] = useStateValue();

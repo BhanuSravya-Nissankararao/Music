@@ -8,6 +8,11 @@ export default function FilterButtons({filterData,flag}) {
     const [filterName, setFilterName] = useState(null);
     const [filterMenu,setFilterMenu] = useState(false);
     const [{ artistFilter, albumFilter, filterTerm, languageFilter }, dispatch] = useStateValue();
+    console.log(artistFilter)
+    console.log(albumFilter)
+    console.log(languageFilter)
+    console.log(filterTerm)
+    // console.log(dispatch)
     const updateFilterButton=(name)=>{
         setFilterMenu(false);
         setFilterName(name);

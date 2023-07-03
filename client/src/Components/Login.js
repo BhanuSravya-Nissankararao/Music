@@ -11,6 +11,7 @@ export default function Login(setAuth) {
   const provider=new GoogleAuthProvider();
   const navigate=useNavigate();
   const [{user},dispatch]=useStateValue();
+  console.log(user);
   const loginWithGoogle = async () =>{
     await signInWithPopup(firebaseAuth,provider).then((userCred)=>{
       if(userCred){
@@ -44,7 +45,7 @@ export default function Login(setAuth) {
     if(window.localStorage.getItem("auth")==="true"){
       navigate("/home",{replace:true})
     }
-  },[])
+  })
   return (
       <div className='relative w-screen h-screen'>
         <div className='absolute inset-0 bg-darkOverlay flex items-center justify-center p-4'>

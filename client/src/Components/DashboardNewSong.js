@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
-  getStorage,
+//   getStorage,
   ref,
   getDownloadURL,
   uploadBytesResumable,
@@ -29,7 +29,7 @@ import {
 //   import AlertError from "./AlertError";
 export default function DashboardNewSong() {
     const [songName, setSongName] = useState("");
-    const [{allArtists,allAlbums,allSongs,artistFilter, albumFilter, filterTerm, languageFilter,alertType},dispath] = useStateValue();
+    const [{allArtists,allAlbums,artistFilter, albumFilter, filterTerm, languageFilter},dispath] = useStateValue();
     const [isImageLoading, setIsImageLoading] = useState(false);
     const [songImageCover, setSongImageCover] = useState(null);
     const [imageUploadProgress, setImageUploadProgress] = useState(0);
@@ -67,7 +67,7 @@ export default function DashboardNewSong() {
                 })
             })
         }
-    },[])
+    })
    const deleteFileObject = (url,isImage) => {
         if(isImage){
             setIsImageLoading(true);

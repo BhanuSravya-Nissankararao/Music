@@ -9,6 +9,7 @@ import { app } from '../config/firebase.config';
 import { motion } from 'framer-motion';
 export default function Header() {
     const [{user},dispatch] = useStateValue();
+    console.log(dispatch)
     const [isMenu, setisMenu] = useState(false)
     const navigate= useNavigate();
     const logOut=()=>{

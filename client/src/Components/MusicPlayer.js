@@ -9,7 +9,7 @@ import { actionType } from '../context/reducer';
 import { IoClose, IoMusicalNote } from 'react-icons/io5';
 
 export default function MusicPlayer() {
-    const [{ allSongs, songIndex, isSongPlaying }, dispatch] =
+    const [{ allSongs, songIndex }, dispatch] =
     useStateValue();
     const [isPlayList, setIsPlayList] = useState(false);
     const nextTrack = ()=>{
@@ -102,7 +102,7 @@ export const PlayListCard = () => {
                 });
             });
         }
-    }, []);
+    });
   
     const setCurrentPlaySong = (index) => {
         if(!isSongPlaying){

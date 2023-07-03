@@ -64,7 +64,7 @@ export default function DashboardHome() {
         })
       })
     }
-  },[])
+  })
   return (
     <div className='w-full p-6 flex items-center justify-evenly flex-wrap'>
       <DashboardCard icon={<FaUsers className="text-3xl text-textColor"/>} name={"Users"} count={allUsers?.length>0?allUsers?.length:0}/>

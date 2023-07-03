@@ -8,7 +8,7 @@ import { deleteObject, ref } from 'firebase/storage';
 import { storage } from '../config/firebase.config';
 export default function SongCard({data,index,type}) {
     const [isDelete, setIsDelete] = useState(false);
-    const [{alertType,allArtists,allAlbums,allSongs,songIndex,isSongPlaying},dispath] = useStateValue();
+    const [{songIndex,isSongPlaying},dispath] = useStateValue();
     const deleteData = (data) => {
         //delte songs
             const deleteRef=ref(storage,data.imageURL);
