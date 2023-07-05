@@ -442,6 +442,7 @@ export const FileLoader = ({progress})=>{
 }
 export const FileUploader = ({updateState,setProgress,isLoading,isImage}) => {
     const [{alertType},dispath] = useStateValue();
+    console.log(alertType);
     const uploadFile = (e) => {
         isLoading(true);
         const uploadedFile = e.target.files[0];
