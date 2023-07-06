@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {motion} from 'framer-motion'
 import { actionType } from '../context/reducer';
 import { useStateValue } from '../context/StateProvider';
-import MusicPlayer from './MusicPlayer';
+// import MusicPlayer from './MusicPlayer';
 // import {IoTrash} from "react-icons/io5"
 
 export default function SongCard1({data,index,type}) {
-    const [{alertType,allArtists,allAlbums,allSongs,songIndex,isSongPlaying},dispath] = useStateValue();
+    const [{songIndex,isSongPlaying},dispath] = useStateValue();
     const addToContext=()=>{
         // console.log(type);
         if(!isSongPlaying){
